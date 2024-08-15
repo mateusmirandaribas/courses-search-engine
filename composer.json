@@ -13,5 +13,7 @@
             "email": "contato.mateusmribas@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "guzzlehttp/guzzle": "^7.9"
+    }
 }
