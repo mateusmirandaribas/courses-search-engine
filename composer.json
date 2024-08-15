@@ -1,0 +1,17 @@
+{
+    "name": "mateusmirandaribas/courses-search-engine",
+    "description": "A search engine to obtain a list of courses from an online course platform.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Mateusmirandaribas\\CoursesSearchEngine\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mateusmirandaribas",
+            "email": "contato.mateusmribas@gmail.com"
+        }
+    ],
+    "require": {}
+}
