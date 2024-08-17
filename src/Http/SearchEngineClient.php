@@ -3,9 +3,14 @@
 namespace src\Http;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Response;
 
-class SearchEngineClient
+class SearchEngineClient implements HttpClientInterface
 {
+    /**
+     *
+     * @var Client
+     */
     public Client $client;
 
     public function __construct()
@@ -16,8 +21,13 @@ class SearchEngineClient
         ]);
     }
 
-    public function get()
+    /**
+     *
+     * @param string $url
+     * @return Response
+     */
+    public function get(string $url): Response
     {
-        return $this->client->request('GET');
+        return $this->client->request('GET', $url);
     }
 }
