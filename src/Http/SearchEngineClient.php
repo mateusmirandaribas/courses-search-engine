@@ -4,6 +4,7 @@ namespace src\Http;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Exception\RequestException;
 
 class SearchEngineClient implements HttpClientInterface
 {
@@ -25,6 +26,7 @@ class SearchEngineClient implements HttpClientInterface
      *
      * @param string $url
      * @return Response
+     * @throws RequestException
      */
     public function get(string $url): Response
     {
