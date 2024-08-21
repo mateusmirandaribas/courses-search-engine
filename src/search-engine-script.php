@@ -10,8 +10,7 @@ use Symfony\Component\DomCrawler\Crawler;
 $searchEngineClient = new SearchEngineClient();
 $searchCourses = new SearchCourses($searchEngineClient);
 
-$response = $searchCourses->search('cursos-online-programacao/php');
-$html = $response->getBody();
+$html = $searchCourses->search('cursos-online-programacao/php');
 
 $crawler = new Crawler();
 $displayCourses = new DisplayCourses($crawler);
