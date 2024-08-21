@@ -2,8 +2,9 @@
 
 namespace src;
 
-use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Stream;
 use src\Http\HttpClientInterface;
+use GuzzleHttp\Exception\RequestException;
 
 class SearchCourses
 {
@@ -18,10 +19,18 @@ class SearchCourses
     /**
      *
      * @param string $url
-     * @return Response
+     * @return Stream
+     * @throws RequestException
      */
-    public function search(string $url): Response
+    public function search(string $url): Stream
     {
-        return $this->searchEngineClient->get($url);
+        try {
+            $response = $this->searchEngineClient->get($url);
+            return $response->getBody();
+        } catch (RequestException $exception) {
+            echo $exception->getMessage() . $exception->getCode() . PHP_EOL;
+            echo "Closing application." . PHP_EOL;
+            exit(1);
+        }
     }
 }
