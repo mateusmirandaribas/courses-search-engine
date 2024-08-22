@@ -14,7 +14,7 @@ class SearchCourses
      */
     public function __construct(
         public HttpClientInterface $searchEngineClient
-    ){}
+    ) {}
 
     /**
      *
@@ -24,13 +24,7 @@ class SearchCourses
      */
     public function search(string $url): Stream
     {
-        try {
-            $response = $this->searchEngineClient->get($url);
-            return $response->getBody();
-        } catch (RequestException $exception) {
-            echo $exception->getMessage() . $exception->getCode() . PHP_EOL;
-            echo "Closing application." . PHP_EOL;
-            exit(1);
-        }
+        $response = $this->searchEngineClient->get($url);
+        return $response->getBody();
     }
 }
