@@ -13,7 +13,7 @@ class DisplayCourses
      */
     public function __construct(
         public Crawler $crawler
-    ){}
+    ) {}
 
     /**
      *
