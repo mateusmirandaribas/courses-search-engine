@@ -14,7 +14,8 @@ class SearchCourses
      */
     public function __construct(
         public HttpClientInterface $searchEngineClient
-    ) {}
+    ) {
+    }
 
     /**
      *
