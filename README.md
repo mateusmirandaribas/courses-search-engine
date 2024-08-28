@@ -1,5 +1,5 @@
 # Courses Search Engine
-This project is a simple Crawler that searchs course information on an online platform.
+This project seeks course information on an online platform through Web Scraping.
 
 ## Installation
 * Run ```composer-install``` to install all dependencies.
@@ -10,4 +10,4 @@ This project is a simple Crawler that searchs course information on an online pl
 In the project root, run ```vendor/bin/phpunit``` to run all tests.
 
 ## Execution
-In the project root, run ```php scripts/search-engine-script.php``` to see Crawler work.
+In the project root, run ```php scripts/search-engine-script.php``` to see it work.
