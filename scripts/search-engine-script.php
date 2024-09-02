@@ -1,6 +1,6 @@
 <?php
 
-require_once './index.php';
+require_once '../index.php';
 
 use src\SearchCourses;
 use src\DisplayCourses;
